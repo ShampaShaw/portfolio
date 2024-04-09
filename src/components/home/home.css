@@ -1,0 +1,48 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f4ef;
+}
+
+.home__left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.home__right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__title{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.home__desc{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 80%;
+    font-family: 'Carattere', cursive;
+}
+
+.home__img{
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+}
