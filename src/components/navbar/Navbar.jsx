@@ -1,22 +1,71 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './navbar.css'
-import dark from '../../assests/nightmode.png'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css';
+import menu from '../../assests/menu.png';
+
+const link = [
+  {
+    id: 1,
+    title: 'Home',
+    path: '/'
+  },
+  {
+    id: 2,
+    title: 'Projects',
+    path: '/projects'
+  },
+  {
+    id: 3,
+    title: 'About',
+    path: '/about'
+  },
+  {
+    id: 4,
+    title: 'Contact',
+    path: '/contact'
+  }
+];
 
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
   return (
-    <div className='navbar' >
+    <div className='navbar'>
       <div className='navbar__left'>Logo</div>
       <div className='navbar__right'>
-        <Link to='/' className='link'>Home</Link>
-        <Link to='/projects' className='link'>Projects</Link>
-        <Link to='/about' className='link'>About</Link>
-        <Link to='/contact' className='link'>Contact</Link>
-        <img src={dark} alt='darkmode' className='imgmode'/>
+        <div className='link'>
+          {link.map(item => (
+            <Link
+              to={item.path}
+              key={item.id}
+              className='navbar__right-item'
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+      <img
+          src={menu}
+          alt='menu'
+          className='menu'
+          onClick={() => setShowLinks(!showLinks)}
+        />
+      {showLinks && (
+        <div className='navbar__right-mobile'>
+          {link.map(item => (
+            <Link
+              to={item.path}
+              key={item.id}
+              className='navbar__right-item'
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

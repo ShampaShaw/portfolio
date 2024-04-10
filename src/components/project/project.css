@@ -1,0 +1,48 @@
+.projects{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #091c24;
+    color: rgb(138, 214, 214);
+    font-family: 'Kaushan Script', cursive;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.projects_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.projects_container_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 350px;
+    height: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 5px solid rgb(40, 59, 59);
+    padding: 10px;
+    margin: 10px;
+}
+
+.projects_container_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.projects_container_left:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    border: 5px solid rgb(112, 170, 170) ;
+}
