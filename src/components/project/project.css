@@ -10,6 +10,13 @@
     padding-bottom: 30px;
 }
 
+.projects__title{
+    font-size: 70px;
+
+    font-family: 'Kaushan Script', cursive;
+    color: rgb(138, 214, 214);
+}
+
 .projects_container{
     display: flex;
     justify-content: center;
@@ -26,12 +33,70 @@
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    width: 350px;
+    width: 450px;
     height: 300px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border: 5px solid rgb(40, 59, 59);
     padding: 10px;
     margin: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.projects_container_right{
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.projects_container_right h1{
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    color: rgb(138, 214, 214);
+    position: relative;
+}
+
+.projects_container_right p,li{
+    font-size: 20px;
+    font-family: 'Carattere', cursive;
+    color: rgb(112, 170, 170);
+}
+
+.tech{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Carattere', cursive;
+    color: rgb(196, 240, 240);
+    flex-direction: column;
+}
+
+.web_link{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 100px;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.web_link_item{
+    text-decoration: none;
+    color: rgb(128, 206, 206);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 5px solid rgb(40, 59, 59);
+    padding: 10px;
+    background-color: rgb(48, 63, 63);
+    border-radius: 10px;
+}
+
+.web_link_item:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    border: 5px solid rgb(112, 170, 170) ;
 }
 
 .projects_container_img{
