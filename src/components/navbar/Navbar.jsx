@@ -27,7 +27,7 @@ const link = [
 ];
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks, setShowLinks] = useState(false); // State to manage links visibility on small screens
 
   return (
     <div className='navbar'>
@@ -46,13 +46,13 @@ const Navbar = () => {
         </div>
       </div>
       <img
-          src={menu}
-          alt='menu'
-          className='menu'
-          onClick={() => setShowLinks(!showLinks)}
-        />
-      {showLinks && (
-        <div className='navbar__right-mobile'>
+        src={menu}
+        alt='menu'
+        className='menu'
+        onClick={() => setShowLinks(!showLinks)} // Toggle links visibility
+      />
+      {showLinks && ( // Show links if showLinks is true
+        <div className='navbar__links-mobile'>
           {link.map(item => (
             <Link
               to={item.path}

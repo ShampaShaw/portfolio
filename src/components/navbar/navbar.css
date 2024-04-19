@@ -11,6 +11,8 @@
 .navbar__left{
     display: flex;
     padding: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
     color: rgb(128, 206, 206);
 }
 
@@ -20,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     width: 30%;
+    font-size: 30px;
     color: rgb(128, 206, 206);
 }
 
@@ -35,6 +38,7 @@
 .navbar__right-item{
     text-decoration: none;
     color: rgb(128, 206, 206);
+    font-family: 'Kaushan Script', cursive;
     margin-right: 20px;
 }
 
@@ -45,14 +49,30 @@
     cursor: pointer;
 }
 
-.navbar__right-mobile{
-    display: none;
-}
-
 .menu{
-    display: none;
-
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 }
+
+.navbar__links-mobile {
+    display: none; /* Hide mobile version by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust this value as needed */
+    right: 0;
+    background-color: #1a2f41;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.navbar__links-mobile .navbar__right-item {
+    padding: 10px;
+    color: rgb(128, 206, 206);
+    text-decoration: none;
+}
+
+/* Existing CSS */
 
 @media screen and (max-width: 768px) {
     .navbar__right {
@@ -80,18 +100,31 @@
         color: #000;
         margin-right: 20px;
     }
-    
+
     .menu{
-        width: 30px;
-        height: 30px;
+        height: 40px;
+        width: 40px;
         cursor: pointer;
-        
+        padding: 10px;
     }
-    
-    .imgmode {
-        width: 30px;
-        height: 30px;
+
+    .navbar__links-mobile {
+        display: flex; /* Show mobile version */
+    }
+
+    /* You may need to adjust other styles for mobile layout */
+}
+
+@media screen and (max-width: 500px) {
+    .navbar__left {
+        font-size: 20px;
+    }
+
+    .navbar__right-item {
+        font-size: 20px;
+    }
+
+    .link {
         margin-right: 10px;
-        cursor: pointer;
     }
 }
