@@ -1,7 +1,6 @@
 import React from 'react'
 import './project.css'
 import shareme from '../../assests/shareme.png'
-import netflix from '../../assests/netflix.png'
 import creativity from '../../assests/creativity-odyssey.png'
 import weather from '../../assests/weather.png'
 import { Link } from 'react-router-dom'
@@ -10,7 +9,7 @@ const Projects = () => {
   return (
     <div className='projects'>
       <h1 className='projects__title'>Projects</h1>
-      <div className='projects-containers'>
+      <div className='projects__wrapper'>
       <div className='projects_container'>
         <div className='projects_container_left'>
           <img src={shareme} alt='shareme' className='projects_container_img'/>
@@ -24,22 +23,6 @@ const Projects = () => {
           <div className='web_link'>
             <Link to='https://scjsm.netlify.app' className='web_link_item'>Website</Link>
             <Link to='https://github.com/ShampaShaw/sc' className='web_link_item'>Github</Link>
-          </div>
-        </div>
-      </div>
-      <div className='projects_container'>
-        <div className='projects_container_left'>
-          <img src={netflix} alt='netflix' className='projects_container_img'/>
-        </div>
-        <div className='projects_container_right'>
-          <h1>Netflix Clone</h1>
-          <p>Created a Netflix Clone 'Streamify' for seamless streaming experience with vast content library and personalized recommendations.</p>
-          <li>Developed MERN stack Netflix clone with admin dashboard.</li>
-          <li>Implemented CRUD functionality for movies via APIs.</li>
-          <li>Integrated JWT authentication and React Hooks for seamless user experience.</li>
-          <p className='tech'>TechStack: ReactJS, NodeJS, ExpressJS, MongoDB, JWT</p>
-          <div className='web_link'>
-            <Link to='https://github.com/ShampaShaw/netflix' className='web_link_item'>Github</Link>
           </div>
         </div>
       </div>

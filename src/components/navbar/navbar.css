@@ -1,4 +1,8 @@
-.navbar{
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,125 +10,111 @@
     height: 60px;
     background-color: #1a2f41;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar__left{
-    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar__left {
     padding: 10px;
     font-family: 'Kaushan Script', cursive;
     font-size: 30px;
     color: rgb(128, 206, 206);
-}
-
-.navbar__right{
+  }
+  
+  .navbar__right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 30%;
-    font-size: 30px;
-    color: rgb(128, 206, 206);
-}
-
-.link{
+  }
+  
+  .link {
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #2e6c6e;
-    margin-right: 20px;
     gap: 40px;
-}
-
-.navbar__right-item{
+  }
+  
+  .navbar__right-item {
     text-decoration: none;
     color: rgb(128, 206, 206);
     font-family: 'Kaushan Script', cursive;
-    margin-right: 20px;
-}
-
-.imgmode{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.menu{
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__right-item:hover {
+    color: #fff;
+  }
+  
+  .menu {
     height: 40px;
     width: 40px;
     cursor: pointer;
-}
-
-.navbar__links-mobile {
-    display: none; /* Hide mobile version by default */
+    display: none;
+  }
+  
+  .navbar__links-mobile {
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust this value as needed */
+    top: 60px;
     right: 0;
     background-color: #1a2f41;
+    width: 100%;
+    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1;
-}
-
-.navbar__links-mobile .navbar__right-item {
+  }
+  
+  .navbar__links-mobile .navbar__right-item {
     padding: 10px;
-    color: rgb(128, 206, 206);
-    text-decoration: none;
-}
-
-/* Existing CSS */
-
-@media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
     .navbar__right {
-        display: none; /* Hide desktop version */
+      display: none;
     }
-
-    .navbar__right-mobile {
-        display: flex; /* Show mobile version */
-        justify-content: space-between;
-        align-items: center;
-        width: 30%;
+  
+    .menu {
+      display: block;
+      padding: 10px;
     }
-
-    .link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: #000;
-        margin-right: 20px;
-        gap: 10px;
-    }
-
-    .navbar__right-item {
-        text-decoration: none;
-        color: #000;
-        margin-right: 20px;
-    }
-
-    .menu{
-        height: 40px;
-        width: 40px;
-        cursor: pointer;
-        padding: 10px;
-    }
-
+  
     .navbar__links-mobile {
-        display: flex; /* Show mobile version */
+      display: flex;
     }
+  }
+  
 
-    /* You may need to adjust other styles for mobile layout */
-}
-
-@media screen and (max-width: 500px) {
-    .navbar__left {
-        font-size: 20px;
+  .navbar__left .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .logo-text:hover {
+    color: #ff6347; /* Change to your desired highlight color */
+  }
+  
+  .highlight {
+    color: #ff6347;
+    animation: highlightAnimation 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes highlightAnimation {
+    0% {
+      color: #ff6347;
     }
-
-    .navbar__right-item {
-        font-size: 20px;
+    50% {
+      color: #ff7f50;
     }
-
-    .link {
-        margin-right: 10px;
+    100% {
+      color: #ff6347;
     }
-}
+  }
+  

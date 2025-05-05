@@ -1,0 +1,196 @@
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce animation for button hover */
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Contact section container */
+.contact {
+  background: #122d42;
+  color: #0f1f2f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  max-width: 600px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  animation: fadeInUp 0.8s ease-in-out both;
+}
+
+/* Contact form */
+.contact__form {
+  background-color: #1b2938;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+/* Subtitle */
+.contact__subtitle {
+  margin-bottom: 30px;
+  color: #8ad6d6;
+  text-align: center;
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+/* Inputs and textarea */
+.contact__form input,
+.contact__form textarea {
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  background-color: #132435;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact__form input:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.contact__form input:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.contact__form textarea {
+  animation-delay: 0.6s;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  color: #ccc;
+}
+
+/* Input focus animation */
+.contact__form input:focus,
+.contact__form textarea:focus {
+  box-shadow: 0 0 8px #7fffd4;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Submit button */
+.contact__form button {
+  background-color: #7fffd4;
+  color: #0f1f2f;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.contact__form button:hover {
+  background-color: #5be3b3;
+}
+
+/* Success message */
+.contact__success {
+  color: #7fffd4;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Social media links */
+.contact__links {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+.contact__links a {
+  font-size: 2rem;
+  color: #ffde59;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact__links a:hover {
+  color: #7fffd4;
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 15px;
+    margin: 30px auto;
+  }
+
+  .contact__subtitle {
+    font-size: 1rem;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  .contact__form button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .contact__links a {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  .contact__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .contact__form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .contact__links {
+    gap: 15px;
+  }
+
+  .contact__links a {
+    font-size: 1.4rem;
+  }
+}

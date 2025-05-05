@@ -1,3 +1,49 @@
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    will-change: transform, opacity;
+  }
+  
+  .animate-on-scroll.slide-up.animate {
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .animate-on-scroll.fade-in.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+
+  .projects__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+  
+
+
 .projects{
     display: flex;
     justify-content: center;

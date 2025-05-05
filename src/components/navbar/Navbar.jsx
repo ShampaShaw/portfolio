@@ -1,47 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './navbar.css';
 import menu from '../../assests/menu.png';
 
-const link = [
-  {
-    id: 1,
-    title: 'Home',
-    path: '/'
-  },
-  {
-    id: 2,
-    title: 'Projects',
-    path: '/projects'
-  },
-  {
-    id: 3,
-    title: 'About',
-    path: '/about'
-  },
-  {
-    id: 4,
-    title: 'Contact',
-    path: '/contact'
-  }
+const links = [
+  { id: 1, title: 'Home', href: '#home' },
+  { id: 2, title: 'Projects', href: '#projects' },
+  { id: 3, title: 'About', href: '#about' },
+  { id: 4, title: 'Contact', href: '#contact' }
 ];
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false); // State to manage links visibility on small screens
+  const [showLinks, setShowLinks] = useState(false);
 
   return (
     <div className='navbar'>
-      <div className='navbar__left'>Logo</div>
+      <div className='navbar__left'>
+        <div className='logo'>
+          <h1 className="logo-text">Welcome</h1>
+        </div>
+      </div>
       <div className='navbar__right'>
         <div className='link'>
-          {link.map(item => (
-            <Link
-              to={item.path}
+          {links.map(item => (
+            <a
+              href={item.href}
               key={item.id}
               className='navbar__right-item'
+              onClick={() => setShowLinks(false)} // close mobile menu on click
             >
               {item.title}
-            </Link>
+            </a>
           ))}
         </div>
       </div>
@@ -49,18 +37,19 @@ const Navbar = () => {
         src={menu}
         alt='menu'
         className='menu'
-        onClick={() => setShowLinks(!showLinks)} // Toggle links visibility
+        onClick={() => setShowLinks(!showLinks)}
       />
-      {showLinks && ( // Show links if showLinks is true
+      {showLinks && (
         <div className='navbar__links-mobile'>
-          {link.map(item => (
-            <Link
-              to={item.path}
+          {links.map(item => (
+            <a
+              href={item.href}
               key={item.id}
               className='navbar__right-item'
+              onClick={() => setShowLinks(false)} // close menu
             >
               {item.title}
-            </Link>
+            </a>
           ))}
         </div>
       )}
